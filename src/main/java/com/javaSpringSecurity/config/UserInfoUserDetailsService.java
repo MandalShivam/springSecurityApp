@@ -10,7 +10,12 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
-
+/*
+here we are using own UserDetailsService class(UserInfoUserDetailsService) by implementing it for
+custom logic for authentication
+this class will take the user credentials from the database and calls UserInfoUserDetails class to convert
+the user credentials to UserDetails form so that spring authenticator can understand that
+* */
 @Component
 public class UserInfoUserDetailsService implements UserDetailsService {
 

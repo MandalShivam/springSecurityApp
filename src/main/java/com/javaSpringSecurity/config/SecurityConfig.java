@@ -28,7 +28,7 @@ public class SecurityConfig {
     // Now for authentication we have  userdetailsService we have to configure it as bean
 
     @Bean
-    //authentication
+    // this is the code for authentication
     public UserDetailsService userDetailsService() {
        /* UserDetails admin = User.withUsername("Basant")
                 .password(encoder.encode("Pwd1"))
@@ -46,7 +46,7 @@ public class SecurityConfig {
 
     // Now we need to permit what are all urls we want to be authenticated
     // what are all the urls we permit to access
-
+    // this is the code for authorization
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(csrf->csrf.disable())
